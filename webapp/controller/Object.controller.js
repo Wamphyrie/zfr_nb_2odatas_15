@@ -25,6 +25,11 @@ sap.ui.define([
 			 * @public
 			 */
 			onInit : function () {
+				
+				var oDataModelObj = new sap.ui.model.odata.ODataModel("/sap/opu/odata/sap/ZFR_WRKINT_SRV/");
+					
+					this.setModel(oDataModelObj, "ODMDL2");
+				
 				// Model used to manipulate control states. The chosen values make sure,
 				// detail page is busy indication immediately so there is no break in
 				// between the busy indication for loading the view's meta data

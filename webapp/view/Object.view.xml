@@ -17,13 +17,28 @@
 		</semantic:titleHeading>
 
 		<semantic:headerContent>
-			<ObjectNumber
-				number="{
-					path: 'Salary',
-					formatter: '.formatter.numberUnit'
-				}"
-				numberUnit="{Country}"
-			/>
+			<Table  items = "{ODMDL2>/wrkintSet}"  fixedLayout = "false"  growing = "true"  growingThreshold = "10"  >
+				<columns>
+					<Column>
+						<Label  text = "User ID"  />
+					</Column>
+					<Column>
+						<Label  text = "Internal Number"  />
+					</Column>
+					<Column>
+						<Label  text = "First Name"  />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text  text = "{ODMDL2>Userid}"  />
+							<Text  text = "{ODMDL2>Internalnumb}"  />
+							<Text  text = "{ODMDL2>Firstname}"  />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
 		</semantic:headerContent>
 
 		<semantic:sendEmailAction>
